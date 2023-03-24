@@ -5,30 +5,30 @@ import { styles } from './style';
 
 type Props = {
 
-  name : string;
+  name: string;
 
   //declarando função
-  onRemove : () => void;
+  onRemove: () => void;
 }
 
-export function Participante({name, onRemove}: Props) {
+export function Participante({ name, onRemove }: Props) {
 
 
   return (
     <View style={styles.container}>
-        <Text style={styles.name}>
-            {name}
-        </Text>
+      <Text style={styles.name}>
+        {name}
+      </Text>
 
-        <TouchableOpacity 
+      <TouchableOpacity
         style={styles.button}
         onPress={onRemove}
-        >
-            <Text style={styles.buttonText}>
-              -
-            </Text>
-            
-          </TouchableOpacity>
+      >
+        <Text style={styles.buttonText}>
+          -
+        </Text>
+
+      </TouchableOpacity>
 
     </View>
   );
